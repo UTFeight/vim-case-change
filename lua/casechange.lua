@@ -85,7 +85,7 @@ end
 
 -- vim.keymap.set('v', '~', function() casechange() end, { noremap = true, silent = true, desc = 'CaseChange Plug' })
 
-vim.api.nvim_create_user_command("ToggleChange", function()
+vim.api.nvim_create_user_command("ToggleCase", function()
 	casechange()
 end, {})
 
