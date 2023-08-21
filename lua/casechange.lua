@@ -85,7 +85,12 @@ function _G.casechange()
 	vim.cmd('normal! ' .. [["zPv`[]]) -- FIXED: by using: d - rather than c at fun beg
 end
 
-vim.keymap.set('v', '~', function() casechange() end, { noremap = true, silent = true, desc = 'CaseChange Plug' })
+-- vim.keymap.set('v', '~', function() casechange() end, { noremap = true, silent = true, desc = 'CaseChange Plug' })
+
+nvim_create_user_command('CaseChange', function ()
+   lua casechange(), { nargs = 0 }
+end)
+
 -- vnoremap ~ "<C-R>=casechange(@z)<CR><Esc>v`[
 
 my_plugin.options = nil
