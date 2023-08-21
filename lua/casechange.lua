@@ -88,7 +88,7 @@ end
 -- vim.keymap.set('v', '~', function() casechange() end, { noremap = true, silent = true, desc = 'CaseChange Plug' })
 
 nvim_create_user_command('CaseChange', function ()
-   lua casechange(), { nargs = 0 }
+   casechange(), { nargs = 0 }
 end)
 
 -- vnoremap ~ "<C-R>=casechange(@z)<CR><Esc>v`[
